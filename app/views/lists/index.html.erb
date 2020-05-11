@@ -18,7 +18,7 @@
             <% end %>
           </center>
         </td>
-        <td><%= link_to 'Destroy', list, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Delete', list, class: 'btn-outline-danger btn-sm', method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% else %>
       <tr>
@@ -32,7 +32,7 @@
             <% end %>
           </center>
         </td>
-        <td><%= link_to 'Destroy', list, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Delete', list, class: 'btn-outline-danger btn-sm', method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
     <% end %>
@@ -41,4 +41,5 @@
 
 <br>
 
-<%= link_to 'New List', new_list_path %>
+<%= link_to 'Delete Done Tasks', home_delete_items_path , data: { confirm: 'Are you sure you delete all checked tasks?' } %> ---
+<%= link_to 'Delete All Tasks', home_delete_all_items_path , data: { confirm: 'Are you sure you want to delete all tasks?' } %>
